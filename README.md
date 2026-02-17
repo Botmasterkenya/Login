@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Project Design Report - Smart Medicine Reminder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            background-color: #f4f6f9;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-        }
-        section {
-            background: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
-</head>
+  
+     
 <body>
 
 <h1>Project Design Report (PDR)</h1>
