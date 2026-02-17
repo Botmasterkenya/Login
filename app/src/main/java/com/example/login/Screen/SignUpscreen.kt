@@ -34,6 +34,11 @@ import com.example.login.R
 @Composable
 fun SignUpscreen(modifier: Modifier = Modifier)    {
 
+
+
+
+
+
     var email by remember {
         mutableStateOf("")
     }

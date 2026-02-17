@@ -1,5 +1,10 @@
 package com.example.login.Screen
 
+
+import android.media.MediaPlayer
+import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalContext
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,6 +32,25 @@ import com.example.login.R
 
 @Composable
 fun Authscreen(modifier: Modifier = Modifier, navController: NavHostController){
+
+
+    val context = LocalContext.current
+
+    val mediaPlayer = remember {
+        MediaPlayer.create(context, R.raw.login_music).apply {
+            isLooping = true
+            setVolume(0.3f, 0.3f) // lower volume
+            start()
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            mediaPlayer.release()
+        }
+    }
+
+
 
     Column(
         modifier = Modifier.fillMaxSize().padding(32.dp),
