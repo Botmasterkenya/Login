@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -29,15 +30,13 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.login.AppUtil
 import com.example.login.R
+import com.example.login.viewmodel.AuthviewModel
 
 @Composable
-fun SignUpscreen(modifier: Modifier = Modifier)    {
-
-
-
-
-
+fun SignUpscreen(modifier: Modifier = Modifier,authviewModel: AuthviewModel = viewModel())    {
 
     var email by remember {
         mutableStateOf("")
@@ -50,6 +49,8 @@ fun SignUpscreen(modifier: Modifier = Modifier)    {
     var password by remember {
         mutableStateOf("")
     }
+
+    var context = LocalContext.current
 
 
 
@@ -71,8 +72,6 @@ fun SignUpscreen(modifier: Modifier = Modifier)    {
 
 
             )
-
-
 
         Text(
             text = "Create an account!",
@@ -119,7 +118,7 @@ fun SignUpscreen(modifier: Modifier = Modifier)    {
         },
 
             label = {
-                Text(text = "name")
+                Text(text = "Name")
 
             },
             modifier = modifier.fillMaxWidth()
@@ -143,10 +142,15 @@ fun SignUpscreen(modifier: Modifier = Modifier)    {
 
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
-
 
         Button(onClick = {
+            authviewModel.signup(email,name,password){success,errorMessage->
+                if(success) {
+                }else{
+                    AppUtil.showToast(context,errorMessage?:"Something went wrong")
+
+                }
+                }
         },
 
             modifier = Modifier.fillMaxWidth().

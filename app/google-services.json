@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "507686269497",
+    "project_id": "login-c3bfa",
+    "storage_bucket": "login-c3bfa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507686269497:android:931b2e5ba518d32ccc53e8",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB69W9tinvUDI4bLqLVbJuR2f1thF3fX2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

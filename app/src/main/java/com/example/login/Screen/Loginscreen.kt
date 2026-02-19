@@ -35,8 +35,6 @@ fun Loginscreen(modifier: Modifier = Modifier){
         mutableStateOf("")
     }
 
-
-
     var password by remember {
         mutableStateOf("")
     }
@@ -59,10 +57,7 @@ fun Loginscreen(modifier: Modifier = Modifier){
                 fontWeight = FontWeight.Bold,
             )
 
-
         )
-
-
 
         Text(
             text = "Sign in to your account!",
@@ -101,10 +96,6 @@ fun Loginscreen(modifier: Modifier = Modifier){
             modifier = modifier.fillMaxWidth()
 
         )
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-
 
 
         OutlinedTextField(
